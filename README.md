@@ -7,7 +7,7 @@ Usage:
 ```
 mkdir temp
 cd temp
-wget https://raw.githubusercontent.com/afiskon/install-couchdb/master/install-couchdb.sh
+wget https://raw.githubusercontent.com/yongteak/install-couchdb/master/install-couchdb.sh
 sh install-couchdb.sh
 # then see http://localhost:5984/_utils/
 ```
