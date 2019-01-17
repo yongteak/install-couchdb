@@ -2,16 +2,16 @@
 
 set -e
 
+curl -L https://couchdb.apache.org/repo/bintray-pubkey.asc \ | sudo apt-key add -
+echo "deb https://apache.bintray.com/couchdb-deb xenial main" \ | sudo tee -a /etc/apt/sources.list.d/apache_couchdb_xenial.list
+echo "deb https://apache.bintray.com/couchdb-deb bionic main" \ | sudo tee -a /etc/apt/sources.list.d/apache_couchdb_bionic.list
+
 
 sudo apt-get update || true
 sudo apt-get --no-install-recommends -y install \
     build-essential pkg-config runit curl \
     libicu-dev libmozjs185-dev libcurl4-openssl-dev
-
-curl -L https://couchdb.apache.org/repo/bintray-pubkey.asc \ | sudo apt-key add -
-echo "deb https://apache.bintray.com/couchdb-deb xenial main" \ | sudo tee -a /etc/apt/sources.list.d/apache_couchdb_xenial.list
-echo "deb https://apache.bintray.com/couchdb-deb bionic main" \ | sudo tee -a /etc/apt/sources.list.d/apache_couchdb_bionic.list
-
+    
 wget http://apache-mirror.rbc.ru/pub/apache/couchdb/source/2.3.0/apache-couchdb-2.3.0.tar.gz
 
 tar -xvzf apache-couchdb-2.3.0.tar.gz
