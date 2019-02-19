@@ -1,3 +1,4 @@
+
 # install-couchdb
 
 Simple CouchDB 2.x installation script
@@ -12,4 +13,4 @@ sh install-couchdb.sh
 # then see http://localhost:5984/_utils/
 ```
 
-Tested on Ubuntu 16.04
+Tested on Ubuntu 16.04 (상위버전에서는 라이브러리 오류 발생)
