@@ -10,7 +10,7 @@ echo "deb https://apache.bintray.com/couchdb-deb bionic main" \ | sudo tee -a /e
 sudo apt-get update || true
 sudo apt-get --no-install-recommends -y install \
     build-essential pkg-config runit curl \
-    libicu-dev libmozjs185-dev libcurl4-openssl-dev
+    libicu-dev libmozjs185-dev libcurl4-openssl-dev software-properties-common
     
 wget https://github.com/apache/couchdb/releases/download/2.2.0/apache-couchdb-2.2.0.tar.gz
 
